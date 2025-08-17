@@ -1,0 +1,17 @@
+<h2>Top 3 studios with winners</h2>
+<nz-table #rowSelectionTable [nzShowPagination]="false" [nzData]="listOfData" [nzLoading]="loading" [nzBordered]="true">
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Win Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (data of rowSelectionTable.data; track data) {
+        <tr>
+            <td>{{ data.name }}</td>
+            <td>{{ data.winCount }}</td>
+        </tr>
+        }
+    </tbody>
+</nz-table>

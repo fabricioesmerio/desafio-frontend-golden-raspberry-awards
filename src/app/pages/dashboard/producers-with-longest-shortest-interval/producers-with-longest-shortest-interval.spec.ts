@@ -6,7 +6,7 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { MaxMinWinIntervalForProducersResponse } from './models/max-min-win-interval-producers-response';
 import { of } from 'rxjs';
 
-fdescribe(ProducersWithLongestShortestInterval.name, () => {
+describe(ProducersWithLongestShortestInterval.name, () => {
   let component: ProducersWithLongestShortestInterval;
   let fixture: ComponentFixture<ProducersWithLongestShortestInterval>;
   let service: jasmine.SpyObj<ProducersWithLongestShortestIntervalService>;

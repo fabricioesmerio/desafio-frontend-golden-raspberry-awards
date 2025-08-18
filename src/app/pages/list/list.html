@@ -1,1 +1,47 @@
-<p>list works!</p>
+<div nz-row [nzGutter]="16">
+    <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24" nzXl="24">
+        <h1>List movie</h1>
+
+        <nz-table #rowTable [nzShowPagination]="true" [nzFrontPagination]="false" [nzTotal]="listOfData.totalElements"
+            [nzPageSize]="listOfData.size" [nzData]="listOfData.content" [nzLoading]="loading" [nzBordered]="true"
+            (nzPageIndexChange)="pageIndexChange($event)">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>
+                        <div class="flex column" >
+                            Year
+                            <input nz-input placeholder="Filter by year" [formControl]="year" type="number" min="1980" max="2025" />
+                        </div>
+
+                    </th>
+                    <th>Title</th>
+                    <th>
+                        <div class="flex column" >
+                            Winner
+                            <nz-select [(ngModel)]="winner" (ngModelChange)="onChangeWinnerSelect()">
+                                <nz-option [nzValue]="true" nzLabel="Yes"></nz-option>
+                                <nz-option [nzValue]="false" nzLabel="No"></nz-option>
+                                <nz-option [nzValue]="null" nzLabel="---"></nz-option>
+                            </nz-select>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (data of rowTable.data; track data.id) {
+                <tr>
+                    <td>{{ data.id }}</td>
+                    <td>{{ data.year }}</td>
+                    <td>{{ data.title }}</td>
+                    <td>
+                        @let value = data.winner ? 'Yes' : 'No';
+                        {{ value }}
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </nz-table>
+
+    </div>
+</div>

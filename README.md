@@ -1,59 +1,72 @@
-# GoldenRaspberryAwards
+# Desafio Frontend Golden Raspberry Awards
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+Uma aplicação [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3 que permite visualizar dados sobre os vencedores do Golden Raspberry Awards através de dashboards interativos e listas filtráveis.
 
-## Development server
+A aplicação possui **duas rotas principais**:
 
-To start a local development server, run:
+## 1. Dashboard
+Composto por quatro painéis que exibem:
+- Anos que tiveram mais de um vencedor (tabela).
+- Os três estúdios com mais vitórias (tabela).
+- Produtores com maior e menor intervalo entre vitórias (tabela).
+- Vencedores de um ano específico, selecionado via campo de busca (tabela).
+
+## 2. Lista de filmes
+Exibe todos os filmes, com:
+- Paginação para navegar pelos resultados.
+- Filtros: por **ano** e por **vencedor**.
+
+---
+
+## Requisitos
+
+Para executar o projeto localmente, você precisará ter instalado:
+
+- **Node.js** v18 ou superior
+- **npm** v9 ou superior
+- **Angular CLI** v20
+
+O projeto utiliza **Ng-Zorro Ant Design** para os componentes de interface, como tabelas, formulários e menus, e **RxJS** para gerenciamento de streams e debounce em filtros de busca.
+
+---
+
+## Instalação e execução
+
+Siga os passos abaixo para rodar o projeto localmente:
+
+1. **Clone o repositório**
+
+```bash
+git clone https://github.com/fabricioesmerio/desafio-frontend-golden-raspberry-awards.git
+cd desafio-frontend-golden-raspberry-awards
+```
+
+2. **Instale as dependências**
+
+```bash
+npm install
+```
+
+3. **Execute a aplicação**
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+A aplicação estará disponível em [http://localhost:4200](http://localhost:4200).
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+4. **Execute os testes**
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
+## Contato / Autor
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- **Autor:** Fabricio Esmerio
+- **Email:** [fabricio1esmerio@gmail.com](mailto\:fabricio1esmerio@gmail.com)
+- **GitHub:** [github.com/fabricioesmerio](https://github.com/fabricioesmerio)
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

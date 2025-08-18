@@ -1,0 +1,25 @@
+<h2>List movie winners by year</h2>
+<div class="flex gap-16">
+    <input nz-input placeholder="Search by year" [(ngModel)]="year" type="number" />
+    <button nz-button nzType="primary" nzSize="large" (click)="fetchWinnersByYear()">
+        <nz-icon nzType="search" nzTheme="outline" />
+    </button>
+</div>
+<nz-table #rowTable [nzShowPagination]="false" [nzData]="listOfData" [nzLoading]="loading" [nzBordered]="true">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Year</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (data of rowTable.data; track data) {
+        <tr>
+            <td>{{ data.id }}</td>
+            <td>{{ data.year }}</td>
+            <td>{{ data.title }}</td>
+        </tr>
+        }
+    </tbody>
+</nz-table>

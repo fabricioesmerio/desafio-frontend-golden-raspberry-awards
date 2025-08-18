@@ -35,9 +35,11 @@ export class TopStudiosWithWinners implements OnInit {
   }
 
   private getTop3Winners(response: TopStudiosWithWinnersResponse): TopStudiosWithWinnersResponse {
+    if (response.length === 0) return [];
+    
     const data = response.sort((a, b) => a.winCount < b.winCount ? 1 : -1);
     const result: TopStudiosWithWinnersResponse = [];
-        
+
     for (let i = 0; i < 3; i++) {
       result.push(data[i]);
     }

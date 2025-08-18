@@ -1,1 +1,20 @@
-<p>dashboard works!</p>
+<div nz-row [nzGutter]="16">
+
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
+        <app-years-with-multiple-winners-table />
+        <div class="divider"></div>
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
+
+        <app-top-studios-with-winners />
+        <div class="divider"></div>
+
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
+        <app-producers-with-longest-shortest-interval />
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
+        <app-list-movie-winners-by-year />
+    </div>
+
+</div>

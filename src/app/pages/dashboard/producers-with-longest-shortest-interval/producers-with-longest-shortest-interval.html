@@ -1,0 +1,44 @@
+<h2>Producers with longest and shortest interval betwwen wins</h2>
+<h3>Maximium</h3>
+<nz-table #rowMaxTable [nzShowPagination]="false" [nzData]="listOfMax" [nzLoading]="loading" [nzBordered]="true">
+    <thead>
+        <tr>
+            <th>Producer</th>
+            <th>Interval</th>
+            <th>Previous Year</th>
+            <th>Following Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (data of rowMaxTable.data; track data) {
+        <tr>
+            <td>{{ data.producer }}</td>
+            <td>{{ data.interval }}</td>
+            <td>{{ data.previousWin }}</td>
+            <td>{{ data.followingWin }}</td>
+        </tr>
+        }
+    </tbody>
+</nz-table>
+
+<h3>Minimum</h3>
+<nz-table #rowMinTable [nzShowPagination]="false" [nzData]="listOfMin" [nzLoading]="loading" [nzBordered]="true">
+    <thead>
+        <tr>
+            <th>Producer</th>
+            <th>Interval</th>
+            <th>Previous Year</th>
+            <th>Following Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (data of rowMinTable.data; track data) {
+        <tr>
+            <td>{{ data.producer }}</td>
+            <td>{{ data.interval }}</td>
+            <td>{{ data.previousWin }}</td>
+            <td>{{ data.followingWin }}</td>
+        </tr>
+        }
+    </tbody>
+</nz-table>

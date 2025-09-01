@@ -42,6 +42,7 @@ export class List implements OnInit {
     )
       .subscribe(_ => {
         if (this.year.valid) {
+          this.currentPageIndex = 0;
           this.fetchMovies();
         }
       })
@@ -77,6 +78,7 @@ export class List implements OnInit {
   }
 
   onChangeWinnerSelect() {
+    this.currentPageIndex = 0;
     this.fetchMovies();
   }
 

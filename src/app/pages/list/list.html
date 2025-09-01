@@ -4,6 +4,7 @@
 
         <nz-table #rowTable [nzShowPagination]="true" [nzFrontPagination]="false" [nzTotal]="listOfData.totalElements"
             [nzPageSize]="listOfData.size" [nzData]="listOfData.content" [nzLoading]="loading" [nzBordered]="true"
+            [nzPageIndex]="currentPageIndex + 1"
             (nzPageIndexChange)="pageIndexChange($event)">
             <thead>
                 <tr>
